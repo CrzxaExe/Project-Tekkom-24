@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-back-200: #9f9f9f;
+  --color-back-800: #464646;
+  --color-back-900: #242424;
+
+  --color-accent-300: #60a5fa;
+
+  --font-primary: "Inter";
+  --font-secondary: "Poppins";
+}
+
+html,
+body {
+  background: #242424;
+  scroll-behavior: smooth;
+}
+
+@utility section-screen {
+  @apply flex max-w-[115em] mx-auto w-full min-h-full px-5 md:px-6 lg:px-10 py-6 md:py-8 lg:py-12;
+}
+
+@utility h-screen-minus-* {
+  min-height: calc(100vh - var(--spacing) * --value(integer));
+}
+
+@utility medium-only {
+  @apply hidden lg:block;
+}
+
+@utility small-only {
+  @apply block lg:hidden;
+}
+
+@utility nav-link-btn {
+  @apply w-full lg:w-fit px-5 py-1 lg:px-4 rounded-lg text-center transition-all duration-300 ease-in-out text-white hover:bg-white hover:text-black lg:hover:bg-transparent lg:hover:text-teal-500 active:bg-gray-600 active:text-gray-800 lg:active:bg-white lg:active:text-teal-700;
+}
