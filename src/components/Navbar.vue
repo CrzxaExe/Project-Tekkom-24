@@ -18,6 +18,7 @@ const toggleDarkMode = () => {
     document.documentElement.classList.toggle("dark");
 
     isDarkMode.value = !isDarkMode
+    toggleHamburger();
 }
 
 </script>
@@ -25,7 +26,7 @@ const toggleDarkMode = () => {
 <template>
     <header class="fixed mx-auto flex justify-center w-full z-[99] transition-all ease-in-out duration-300"
         :class="[scroll > 20 ? 'bg-back-900/80 shadow-lg' : 'bg-back-900/0']">
-        <div class="max-w-[110em] py-2 lg:py-2 w-full px-5 lg:px-1 flex flex-row justify-between items-center relative">
+        <div class="max-w-[110em] py-2 lg:py-2 w-full px-5 lg:px-0 flex flex-row justify-between items-center relative">
             <div class="flex flex-row items-center">
                 <div>
                     <Suspense>
