@@ -2,9 +2,9 @@
 import { ref } from 'vue';
 import Skeleton from './Skeleton.vue'
 
-
 const scroll = ref(0);
 const toggle = ref(false);
+const isDarkMode = ref(true);
 
 window.addEventListener("scroll", () => {
     scroll.value = window.scrollY;
@@ -12,6 +12,12 @@ window.addEventListener("scroll", () => {
 
 const toggleHamburger = () => {
     toggle.value = !toggle.value;
+}
+
+const toggleDarkMode = () => {
+    document.documentElement.classList.toggle("dark");
+
+    isDarkMode.value = !isDarkMode
 }
 
 </script>
@@ -42,15 +48,15 @@ const toggleHamburger = () => {
             </div>
             <div class="w-full max-w-[1.88rem] flex flex-col gap-2 justify-center items-center lg:hidden cursor-pointer"
                 v-on:click="toggleHamburger">
-                <span class="w-full h-[2px] bg-white rounded transition-all ease-in-out duration-300 origin-top-left"
+                <span class="w-full h-[2px] bg-black dark:bg-white rounded transition-all ease-in-out duration-300 origin-top-left"
                     :class="[toggle ? 'rotate-45 translate-x-1' : '']"></span>
-                <span class="w-full h-[2px] bg-white rounded transition-all ease-in-out duration-300"
+                <span class="w-full h-[2px] bg-black dark:bg-white rounded transition-all ease-in-out duration-300"
                     :class="[toggle ? 'opacity-0' : '']"></span>
-                <span class="w-full h-[2px] bg-white rounded transition-all ease-in-out duration-300 origin-bottom-left"
+                <span class="w-full h-[2px] bg-black dark:bg-white rounded transition-all ease-in-out duration-300 origin-bottom-left"
                     :class="[toggle ? '-rotate-45 translate-x-1' : '']"></span>
             </div>
-            <nav class="text-sm lg:text-base tracking-wider w-[calc(100%-var(--spacing)*6)] lg:w-fit flex flex-col lg:flex-row gap-2 lg:gap-4 uppercase items-center lg:justify-start absolute lg:relative font-secondary lg:opacity-100 top-[4.9rem] lg:top-0 right-3 lg:right-0 py-4 lg:py-0 px-2 lg:px-0 bg-back-800 lg:bg-back-800/0 transition-all ease-in-out rounded-lg"
-                :class="[toggle ? 'opacity-100' : 'opacity-0']">
+            <nav class="text-sm lg:text-base tracking-wider w-[calc(100%-var(--spacing)*6)] lg:w-fit flex flex-col lg:flex-row gap-2 lg:gap-4 uppercase items-center lg:scale-100 lg:justify-start absolute lg:relative font-secondary lg:opacity-100 top-[4.9rem] lg:top-0 right-3 lg:right-0 py-4 lg:py-0 px-2 lg:px-0 bg-back-800 lg:bg-back-800/0 transition-all ease-in-out rounded-lg"
+                :class="[toggle ? 'opacity-100 scale-100' : 'opacity-0 scale-0']">
                 <RouterLink
                     class="nav-link-btn"
                     to="/" v-on:click="toggleHamburger">
@@ -71,6 +77,10 @@ const toggleHamburger = () => {
                     to="gallery" v-on:click="toggleHamburger">
                     gallery
                 </RouterLink>
+                <button class="nav-link-btn px-3 py-2" @click="toggleDarkMode">
+                    <i class='bx bx-moon' v-if="!isDarkMode"></i>
+                    <i class='bx bxs-moon' v-if="isDarkMode"></i> 
+                </button>
             </nav>
         </div>
     </header>

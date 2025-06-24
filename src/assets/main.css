@@ -13,9 +13,10 @@
 
 html,
 body {
-  background: #242424;
   scroll-behavior: smooth;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @utility section-screen {
   @apply flex max-w-[115em] mx-auto w-full min-h-full px-5 md:px-6 lg:px-10 py-6 md:py-8 lg:py-12;
@@ -34,5 +35,5 @@ body {
 }
 
 @utility nav-link-btn {
-  @apply w-full lg:w-fit px-5 py-1 lg:px-4 rounded-lg text-center transition-all duration-300 ease-in-out text-white hover:bg-white hover:text-black lg:hover:bg-transparent lg:hover:text-teal-500 active:bg-gray-600 active:text-gray-800 lg:active:bg-white lg:active:text-teal-700;
+  @apply w-full lg:w-fit px-5 py-1 lg:px-4 rounded-lg text-center transition-all duration-300 ease-in-out text-black dark:text-white hover:bg-white hover:text-black lg:hover:bg-transparent lg:hover:text-teal-500 active:bg-gray-600 active:text-gray-800 lg:active:bg-black dark:lg:active:bg-white lg:active:text-teal-700;
 }
