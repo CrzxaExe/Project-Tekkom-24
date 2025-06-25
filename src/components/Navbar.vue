@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import Skeleton from './Skeleton.vue'
+import { navbarURL } from '@/constant/globalConst';
 
 const scroll = ref(0);
 const toggle = ref(false);
@@ -17,7 +18,7 @@ const toggleHamburger = () => {
 const toggleDarkMode = () => {
     document.documentElement.classList.toggle("dark");
 
-    isDarkMode.value = !isDarkMode
+    isDarkMode.value = !isDarkMode.value
     toggleHamburger();
 }
 
@@ -25,7 +26,7 @@ const toggleDarkMode = () => {
 
 <template>
     <header class="fixed mx-auto flex justify-center w-full z-[99] transition-all ease-in-out duration-300"
-        :class="[scroll > 20 ? 'bg-back-900/80 shadow-lg' : 'bg-back-900/0']">
+        :class="[scroll > 20 ? 'bg-white dark:bg-back-900/80 shadow-lg' : 'bg-back-900/0']">
         <div class="max-w-[110em] py-2 lg:py-2 w-full px-5 lg:px-0 flex flex-row justify-between items-center relative">
             <div class="flex flex-row items-center">
                 <div>
@@ -42,7 +43,7 @@ const toggleDarkMode = () => {
                     </Suspense>
                 </div>
                 <div class="hidden lg:flex flex-col">
-                    <span class="block tracking-wide text-xl font-semibold">Teknik Komputer '24</span>
+                    <span class="block tracking-wide text-xl font-semibold dark-mode-transition">Teknik Komputer '24</span>
                     <span class="block -mt-2 tracking-tight text-sm text-back-200">Universitas Jendral
                         Soedirman</span>
                 </div>
@@ -59,28 +60,13 @@ const toggleDarkMode = () => {
             <nav class="text-sm lg:text-base tracking-wider w-[calc(100%-var(--spacing)*6)] lg:w-fit flex flex-col lg:flex-row gap-2 lg:gap-4 uppercase items-center lg:scale-100 lg:justify-start absolute lg:relative font-secondary lg:opacity-100 top-[4.9rem] lg:top-0 right-3 lg:right-0 py-4 lg:py-0 px-2 lg:px-0 bg-back-800 lg:bg-back-800/0 transition-all ease-in-out rounded-lg"
                 :class="[toggle ? 'opacity-100 scale-100' : 'opacity-0 scale-0']">
                 <RouterLink
+                    v-for="({ text, url }) in navbarURL"
                     class="nav-link-btn"
-                    to="/" v-on:click="toggleHamburger">
-                    home
+                    :to="url" v-on:click="toggleHamburger">
+                    {{ text }}
                 </RouterLink>
-                <RouterLink
-                    class="nav-link-btn"
-                    to="about" v-on:click="toggleHamburger">
-                    about
-                </RouterLink>
-                <RouterLink
-                    class="nav-link-btn"
-                    to="profile" v-on:click="toggleHamburger">
-                    profile
-                </RouterLink>
-                <RouterLink
-                    class="nav-link-btn"
-                    to="gallery" v-on:click="toggleHamburger">
-                    gallery
-                </RouterLink>
-                <button class="nav-link-btn px-3 py-2" @click="toggleDarkMode">
-                    <i class='bx bx-moon' v-if="!isDarkMode"></i>
-                    <i class='bx bxs-moon' v-if="isDarkMode"></i> 
+                <button class="nav-link-btn px-3 py-2 bg-zinc-400/50 hover:bg-zinc-400/30  dark:bg-zinc-300/40 dark:hover:bg-zinc-300/10" @click="toggleDarkMode">
+                    <i class='bx bx-moon dark-mode-transition' :class="[isDarkMode ? 'bxs-moon' : 'bx-moon']"></i>
                 </button>
             </nav>
         </div>

@@ -20,7 +20,11 @@ body {
 @custom-variant dark (&:where(.dark, .dark *));
 
 @utility section-screen {
-  @apply flex max-w-[106em] mx-auto w-full min-h-full px-5 md:px-6 lg:px-10 py-6 md:py-8 lg:py-12;
+  @apply flex max-w-[106em] mx-auto w-full lg:min-h-screen px-5 md:px-6 lg:px-10 py-6 md:py-8 lg:py-12 gap-3;
+}
+
+@utility sosmed-link-url {
+  @apply text-black dark:text-white hover:text-accent-300 active:text-back-800 transition-all duration-300;
 }
 
 @utility h-screen-minus-* {
@@ -33,6 +37,10 @@ body {
 
 @utility small-only {
   @apply block lg:hidden;
+}
+
+@utility dark-mode-transition {
+  @apply transition-colors duration-600 ease-in-out;
 }
 
 @utility nav-link-btn {

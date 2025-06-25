@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="skeleton" :class>
+    <div class="skeleton bg-linear-[90deg,#d1d1d1_0%,#c2c0c0_10%,#d1d1d1_20%,#d1d1d1_100%] dark:bg-linear-[90deg,#585858_0%,#848484_10%,#585858_20%,#585858_100%] dark-mode-transition" :class>
         &nbsp;
     </div>
 </template>
@@ -25,16 +25,17 @@ defineProps({
 
 .skeleton {
     height: v-bind(height);
+    position: relative;
     width: v-bind(width);
     border-radius: v-bind(rounded);
     display: block;
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
         to right,
-        #464646 0%,
-        #686868 10%,
-        #464646 20%,
-        #464646 100%
-    );
+        #585858 0%,
+        #848484 10%,
+        #585858 20%,
+        #585858  100%
+    ); */
     background-size: 200% 100%;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
         0 2px 4px -2px rgb(0, 0, 0 / 0.1);

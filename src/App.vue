@@ -11,6 +11,8 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 </script>
 
 <template>
+  <div id="top"></div>
+
   <Navbar />
 
   <div class="w-full block pt-22 lg:pt-18 relative"></div>
