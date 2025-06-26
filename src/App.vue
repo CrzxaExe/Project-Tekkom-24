@@ -21,6 +21,6 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
   <Toast
    title="Belum Kelar"
-   desc="Ini belum final yah, jadi sabar dulu. Logo juga blom ada tuh, lagi dibikin"
+   desc="Ini belum final yah, jadi sabar dulu. Logo juga blom diganti"
    icon="bx bx-package" />
 </template>

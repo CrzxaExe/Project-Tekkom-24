@@ -151,7 +151,7 @@ onMounted(() => {
         <RouterLink to="/about" class="bg-accent-300 px-5 lg:px-7 py-1.5 rounded-sm relative w-full font-semibold overflow-hidden transition-all duration-300 ease-in-out hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-back-900 active:bg-back-800 active:text-white">Profile</RouterLink>
       </div>
     </div>
-    <div class="flex-col w-full lg:w-2/3 py-3 lg:py-9 pl-2 lg:pl-8 pb-[3.6rem] lg:pb-0">
+    <div class="flex-col w-full lg:w-2/3 py-3 lg:py-9 pl-2 lg:pl-8 pb-[3.6rem] lg:pb-0 lg:-mt-9">
       <div class="min-w-full lg:min-h-[60vh] rounded-xl flex flex-col lg:items-end">
         <h1 class="text-4xl lg:text-6xl font-bold tracking-tighter hidden lg:block mt-2 dark-mode-transition" id="impr">Tekkom</h1>
 
@@ -171,12 +171,18 @@ onMounted(() => {
     <span class="absolute bottom-5 text-xs text-back-200 dark:text-back-800 w-full text-center left-anim-hero dark-mode-transition">Di bawah ada apa ya?</span>
   </section>
 
-  <section class="section-screen pt-24 justify-center items-center">
-    <div class="flex gap-6 flex-col lg:flex-row w-full min-h-full max-h-[38rem]">
-      <div class="min-h-full w-full lg:w-2/3 bg-zinc-400 h-[38rem] max-h-[38rem] relative">
-        <span class="-rotate-90 absolute medium-only top-8 -left-14 font-light text-back-200 dark:text-back-700 tracking-wider dark-mode-transition">Insert Text</span>
+  <section class="section-screen lg:pt-20 flex-col justify-center items-center lg:gap-2">
+    <div class="w-full">
+      <h1 class="text-4xl lg:text-6xl font-semibold tracking-tight">Insert Text</h1>
+    </div>
+    <div class="flex gap-4 lg:gap-8 flex-col lg:flex-row w-full min-h-full">
+      <div class="min-h-full w-full lg:w-2/3 bg-zinc-400 lg:h-[32rem] max-h-[32rem] relative">
+        <span class="-rotate-90 absolute medium-only top-8 -left-14 font-light text-back-200 dark:text-back-600 tracking-wider dark-mode-transition">Insert Text</span>
       </div>
-      <div class="min-h-full w-full lg:w-1/3 bg-zinc-400 h-[44rem] max-h-[44rem]"></div>
+      <div class="min-h-full w-full lg:w-1/3 h-[32rem] max-h-[32rem] bg-zinc-400"></div>
+    </div>
+    <div class="w-full flex flex-row justify-end lg:mt-2">
+      <h1 class="text-2xl lg:text-4xl font-semibold tracking-tight">Insert A Long Description</h1>
     </div>
   </section>
 </template>
