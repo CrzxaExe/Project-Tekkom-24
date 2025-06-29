@@ -5,7 +5,7 @@ import { onMounted } from 'vue';
 
 import SocialMedia from './../components/SocialMedia.vue'
 import Skeleton from '@/components/Skeleton.vue';
-import Sec1 from '@/components/sections/sec1.vue';
+import Sec1 from '@/components/sections/Sec1.vue';
 
 onMounted(() => {
   document.fonts.ready.then(() => {
