@@ -65,7 +65,7 @@ const toggleDarkMode = () => {
                     :to="url" v-on:click="toggleHamburger">
                     {{ text }}
                 </RouterLink>
-                <button class="nav-link-btn px-3 py-2 bg-zinc-400/50 hover:bg-zinc-400/30  dark:bg-zinc-300/40 dark:hover:bg-zinc-300/10" @click="toggleDarkMode">
+                <button class="nav-link-btn px-3 py-2 bg-zinc-400/50 hover:text-back-200 hover:bg-zinc-400/20  dark:bg-zinc-300/40 dark:hover:bg-zinc-300/10" @click="toggleDarkMode">
                     <i class='bx bx-moon dark-mode-transition' :class="[isDarkMode ? 'bxs-moon' : 'bx-moon']"></i>
                 </button>
             </nav>
