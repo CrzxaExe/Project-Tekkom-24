@@ -18,9 +18,9 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
   <div class="w-full block pt-22 lg:pt-18 relative"></div>
 
   <RouterView />
-
+<!-- 
   <Toast
    title="Belum Kelar"
    desc="Ini belum final yah, jadi sabar dulu. Logo juga blom diganti"
-   icon="bx bx-package" />
+   icon="bx bx-package" /> -->
 </template>

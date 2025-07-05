@@ -44,7 +44,7 @@ const toggleDarkMode = () => {
                 </div>
                 <div class="hidden lg:flex flex-col">
                     <span class="block tracking-wide text-xl font-semibold dark-mode-transition">Teknik Komputer '24</span>
-                    <span class="block -mt-2 tracking-tight text-sm text-back-200">Universitas Jendral
+                    <span class="block -mt-2 tracking-tight text-sm text-back-700 dark:text-back-200">Universitas Jendral
                         Soedirman</span>
                 </div>
             </div>
@@ -57,7 +57,7 @@ const toggleDarkMode = () => {
                 <span class="w-full h-[2px] bg-black dark:bg-white rounded transition-all ease-in-out duration-300 origin-bottom-left"
                     :class="[toggle ? '-rotate-45 translate-x-1' : '']"></span>
             </div>
-            <nav class="text-sm lg:text-base tracking-wider w-[calc(100%-var(--spacing)*6)] lg:w-fit flex flex-col lg:flex-row gap-2 lg:gap-4 uppercase items-center lg:scale-100 lg:justify-start absolute lg:relative font-secondary lg:opacity-100 top-[4.9rem] lg:top-0 right-3 lg:right-0 py-4 lg:py-0 px-2 lg:px-0 bg-back-800 lg:bg-back-800/0 transition-all ease-in-out rounded-lg"
+            <nav class="text-sm lg:text-base tracking-wider w-[calc(100%-var(--spacing)*6)] lg:w-fit flex flex-col lg:flex-row gap-2 lg:gap-4 uppercase items-center lg:scale-100 lg:justify-start absolute lg:relative font-secondary lg:opacity-100 top-[4.9rem] lg:top-0 right-3 lg:right-0 py-4 lg:py-0 px-2 lg:px-0 bg-back-200 dark:bg-back-800 lg:bg-back-200/0 dark:lg:bg-back-800/0 transition-all ease-in-out rounded-lg"
                 :class="[toggle ? 'opacity-100 scale-100' : 'opacity-0 scale-0']">
                 <RouterLink
                     v-for="({ text, url }) in navbarURL"
@@ -65,7 +65,7 @@ const toggleDarkMode = () => {
                     :to="url" v-on:click="toggleHamburger">
                     {{ text }}
                 </RouterLink>
-                <button class="nav-link-btn px-3 py-2 bg-zinc-400/50 hover:text-back-200 hover:bg-zinc-400/20  dark:bg-zinc-300/40 dark:hover:bg-zinc-300/10" @click="toggleDarkMode">
+                <button class="nav-link-btn px-3 py-2 bg-zinc-400/50 hover:text-accent-700 dark:hover:text-accent-300  hover:bg-zinc-400/30  dark:bg-zinc-300/50 dark:hover:bg-zinc-300/10" @click="toggleDarkMode">
                     <i class='bx bx-moon dark-mode-transition' :class="[isDarkMode ? 'bxs-moon' : 'bx-moon']"></i>
                 </button>
             </nav>

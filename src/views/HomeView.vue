@@ -118,6 +118,15 @@ onMounted(() => {
     duration: 0.4,
     stagger: 0.1
   })
+
+  gsap.from(".to-up-anim", {
+    scrollTrigger: '.box',
+    delay: 0.2,
+    duration: 0.6,
+    y: 90,
+    opacity: 0,
+    stagger: 0.06
+  })
 })
 </script>
 
@@ -173,34 +182,34 @@ onMounted(() => {
   </section>
 
   <section class="section-screen lg:pt-20 flex-col justify-center items-center lg:gap-2 relative overflow-x-hidden lg:overflow-x-visible">
-    <div class="w-full">
+    <div class="w-full to-up-anim">
       <h1 class="text-4xl lg:text-6xl font-semibold tracking-tight">Insert Text</h1>
     </div>
     <div class="flex gap-4 lg:gap-8 flex-col lg:flex-row w-full min-h-full">
       <div class="min-h-full w-full lg:w-2/3 lg:h-[32rem] lg:max-h-[32rem] relative flex flex-col gap-2">
-        <p class="lg:w-[57%] font-extralight text-sm lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices ac dolor eleifend vehicula. Sed at ornare risus. In sagittis enim non pharetra luctus. Nullam posuere convallis hendrerit.</p>
-        <h2 class="mt-3 lg:mt-6 text-xl lg:text-3xl">Insert Text</h2>
+        <p class="lg:w-[57%] font-extralight text-sm lg:text-lg to-up-anim">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices ac dolor eleifend vehicula. Sed at ornare risus. In sagittis enim non pharetra luctus. Nullam posuere convallis hendrerit.</p>
+        <h2 class="mt-3 lg:mt-6 text-xl lg:text-3xl to-up-anim">Insert Text</h2>
 
-        <Skeleton width="32rem" class="max-w-[32rem] lg:max-w-[14rem] aspect-square mt-2 lg:mt-4" />
+        <Skeleton width="32rem" class="max-w-[32rem] lg:max-w-[14rem] aspect-square mt-2 lg:mt-4 to-up-anim" />
 
-        <div class="w-full lg:bg-back-200 dark:lg:bg-back-700 lg:h-[29rem] lg:w-[58%] rounded-sm mt-2 dark-mode-transition"></div>
-        <h5 class="text-2xl lg:text-4xl font-medium tracking-widest uppercase lg:w-1/2 mt-4">Insert a long text</h5>
+        <div class="w-full lg:bg-back-200 dark:lg:bg-back-700 lg:h-[29rem] lg:w-[58%] rounded-sm mt-2 dark-mode-transition to-up-anim"></div>
+        <h5 class="text-2xl lg:text-4xl font-medium tracking-widest uppercase lg:w-1/2 mt-4 to-up-anim">Insert a long text</h5>
         
-        <Skeleton width="32rem" class="lg:absolute lg:-top-0 lg:aspect-square lg:left-[62%] max-w-full lg:max-w-[32rem] -z-[1]" />
+        <Skeleton width="32rem" class="lg:absolute lg:-top-0 lg:aspect-square lg:left-[62%] max-w-full lg:max-w-[32rem] -z-[1] to-up-anim" />
 
-        <span class="-rotate-90 absolute medium-only top-8 -left-13 font-light text-back-200 dark:text-back-600 dark-mode-transition">Insert Text</span>
+        <span class="-rotate-90 absolute medium-only top-8 -left-13 font-light text-back-200 dark:text-back-600 dark-mode-transition to-up-anim">Insert Text</span>
       </div>
       <div class="min-h-full w-full lg:w-1/3 lg:h-[32rem] lg:max-h-[32rem] flex flex-col lg:justify-end lg:items-end lg:text-right font-extralight text-sm lg:text-lg medium-only">
-        <h4>Insert Text</h4>
-        <div class="hidden lg:flex flex-row-reverse gap-4 lg:mt-2">
+        <h4 class="to-up-anim">Insert Text</h4>
+        <div class="hidden lg:flex flex-row-reverse gap-4 lg:mt-2 to-up-anim">
           <div class="w-[3.5rem] aspect-square bg-back-200 dark:bg-back-700 dark-mode-transition"></div>
           <div class="min-h-full aspect-video bg-linear-[-45deg,#9f9f9f_15%,#ffffff00_15%,#ffffff00_25%,#9f9f9f_25%,#9f9f9f_40%,#ffffff00_40%,#ffffff00_50%,#9f9f9f_50%,#9f9f9f_65%,#ffffff00_65%,#ffffff00_75%,#9f9f9f_75%,#9f9f9f_90%] dark:bg-linear-[-45deg,#585858_15%,#24242400_15%,#24242400_25%,#585858_25%,#585858_40%,#24242400_40%,#24242400_50%,#585858_50%,#585858_65%,#24242400_65%,#24242400_75%,#585858_75%,#585858_90%] dark-mode-transition"></div>
         </div>
-        <p class="w-full lg:w-[80%] lg:mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a sapien ipsum. Maecenas accumsan magna a tortor commodo tempor. Maecenas vehicula dui ut ligula consequat, nec. Njir coeg Yoga hamil</p>
+        <p class="w-full lg:w-[80%] lg:mt-4 to-up-anim">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a sapien ipsum. Maecenas accumsan magna a tortor commodo tempor. Maecenas vehicula dui ut ligula consequat, nec. Njir coeg Yoga hamil</p>
       </div>
     </div>
     <div class="w-full flex flex-row justify-end mt-4 lg:mt-2">
-      <h1 class="text-2xl lg:text-4xl font-semibold tracking-tight">Insert A Long Description</h1>
+      <h1 class="text-2xl lg:text-4xl font-semibold tracking-tight to-up-anim">Insert A Long Description</h1>
     </div>
 
     <div class="absolute bottom-[3rem] lg:-bottom-[2rem] -left-[10%] border-2 border-dashed w-[12rem] aspect-square border-back-800 -z-[1] opacity-30 lg:opacity-100"></div>

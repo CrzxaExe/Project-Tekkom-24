@@ -27,6 +27,6 @@ onMounted(() => {
             <a :href="e.link" :key="i" class="sosmed-link-url dark-mode-transition"><i :class="e.icon"></i></a>
         </li>
         <li class="w-[1px] px-[1px] h-[1.05rem] mx-1 bg-black sosmed-link dark:bg-back-200 dark-mode-transition"></li>
-        <li class="text-sm font-light tracking-wider font-mono sosmed-link text-zinc-700 dark:text-back-200 dark-mode-transition">Insert Text</li>
+        <li class="text-sm font-light tracking-wider font-mono sosmed-link text-zinc-700 dark:text-back-200 dark-mode-transition">Call Us</li>
     </ul>
 </template>

@@ -2,12 +2,14 @@
 
 @theme {
   --color-back-200: #9f9f9f;
+  --color-back-500: #cbcbcb;
   --color-back-600: #767676;
   --color-back-700: #585858;
   --color-back-800: #464646;
   --color-back-900: #242424;
 
   --color-accent-300: #60a5fa;
+  --color-accent-700: #4381cc;
 
   --font-primary: "Inter";
   --font-secondary: "Poppins";
@@ -21,6 +23,7 @@ body {
 @custom-variant dark (&:where(.dark, .dark *));
 
 @utility section-screen {
+  background-size: 100vw;
   @apply flex max-w-[106em] mx-auto w-full lg:min-h-screen px-5 md:px-6 lg:px-10 py-6 md:py-8 lg:py-12 gap-3;
 }
 
@@ -47,5 +50,5 @@ body {
 }
 
 @utility nav-link-btn {
-  @apply w-full lg:w-fit px-5 py-1 lg:px-4 rounded-lg text-center transition-all duration-300 ease-in-out text-white hover:bg-white hover:text-back-800 dark:hover:text-black lg:hover:bg-transparent lg:hover:text-sky-500 active:bg-gray-600 active:text-gray-800 lg:active:bg-black dark:lg:active:bg-white lg:active:text-sky-700;
+  @apply w-full lg:w-fit px-5 py-1 lg:px-4 rounded-lg text-center transition-all duration-300 ease-in-out dark:text-white hover:bg-white hover:text-back-800 dark:hover:text-shadow-accent-300 lg:hover:bg-transparent lg:hover:text-sky-500 active:bg-gray-600 active:text-gray-800 lg:active:bg-black dark:lg:active:bg-white lg:active:text-sky-700;
 }
