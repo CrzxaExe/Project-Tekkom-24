@@ -32,7 +32,7 @@ onMounted(() => {
     })
 
     motto.lines.forEach(e => {
-      e.classList.add("bg-linear-to-r/srgb", "from-black", "dark:from-white", "to-accent-300/50", "bg-clip-text", "text-transparent", "lg:leading-17", "tracking-tighterr")
+      e.classList.add("bg-linear-to-r/srgb", "from-black", "dark:from-white", "to-accent-300/50", "bg-clip-text", "text-transparent", "lg:leading-17", "tracking-tighterr", "-mt-2")
 
       gsap.from(e, {
         y: 40,
@@ -120,7 +120,7 @@ onMounted(() => {
   })
 
   gsap.from(".to-up-anim", {
-    scrollTrigger: '.box',
+    scrollTrigger: '.to-up-anim',
     delay: 0.2,
     duration: 0.6,
     y: 90,
@@ -140,8 +140,8 @@ onMounted(() => {
         <h3 class="text-sm text-back-200 tracking-wider" id="angkatan">2024</h3>
       </div>
 
-      <div class="mt-10 lg:mt-0">
-        <h6 class="text-sm text-back-700">
+      <div class="mt-8 lg:mt-0">
+        <h6 class="text-sm text-back-700 lg:pb-4">
           Include
           <div class="inline-block">
             <span id="tkn1">Informatika</span>
@@ -150,9 +150,8 @@ onMounted(() => {
           <span class="w-[1px] min-h-[4px] px-[2px] bg-black/50 dark:bg-white/50 dark-mode-transition" id="typ"></span>
         </h6>
         <h2 class="text-4xl lg:text-6xl tracking-tighter font-semibold w-[85%] lg:w-full py-[4px] -mt-2" id="motto">
-          Mottonya mau apa ini cok gw bingung</h2>
-        <p class="mt-4 lg:mt-8 text-zinc-400" id="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
-          augue mollis, lobortis ante finibus, vulputate odio. Aliquam erat volutpat. Yoga hamil</p>
+          Computer Without Enginnering</h2>
+        <p class="mt-2 lg:mt-8 text-zinc-400" id="desc">IT College with some Electro Knowledge that can tell whats is conductor, semi conductor or not. Here are Computer Enginnering Unseod 24</p>
       </div>
 
       <SocialMedia />

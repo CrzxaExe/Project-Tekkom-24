@@ -1,19 +1,17 @@
 <script setup>
 import { ref } from 'vue';
-import Skeleton from './Skeleton.vue'
+import Skeleton from '../Skeleton.vue'
 import { navbarURL } from '@/constant/globalConst';
+import { dark } from '@/utils/darkmode';
+import { sidebar, toggleHamburger } from '@/utils/var';
 
 const scroll = ref(0);
-const toggle = ref(false);
-const isDarkMode = ref(true);
+const toggle = sidebar;
+const isDarkMode = dark;
 
 window.addEventListener("scroll", () => {
     scroll.value = window.scrollY;
 })
-
-const toggleHamburger = () => {
-    toggle.value = !toggle.value;
-}
 
 const toggleDarkMode = () => {
     document.documentElement.classList.toggle("dark");
