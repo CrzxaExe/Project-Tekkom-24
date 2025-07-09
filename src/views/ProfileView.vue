@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+
+</script>
+
 <template>
     <section class="section-screen min-h-full flex-col lg:px-18">
         <div class="w-full pt-3">
@@ -26,4 +31,6 @@
             <div class="min-h-full w-full h-[34rem] bg-zinc-400 mt-4"></div>
         </div>
     </section>
+
+    <RouterLink to="/admin">Admin</RouterLink>
 </template>
