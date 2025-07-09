@@ -25,6 +25,7 @@ defineProps({
 
 .skeleton {
     height: v-bind(height);
+    max-width: 100%;
     width: v-bind(width);
     border-radius: v-bind(rounded);
     display: block;
