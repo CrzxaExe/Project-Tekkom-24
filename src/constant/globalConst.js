@@ -1,5 +1,5 @@
 export const sosmedContent = [
-  { icon: "bx bxl-discord-alt", link: "#" },
+  { icon: "bx bxl-discord-alt", link: "https://discord.gg/5cT4Ttfu7h" },
   {
     icon: "bx bxl-instagram-alt",
     link: "https://www.instagram.com/tekkomunsoed24?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",

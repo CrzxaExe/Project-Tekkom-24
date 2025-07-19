@@ -8,7 +8,6 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      props: true,
       component: WithNavbar,
       children: [
         {
@@ -44,31 +43,26 @@ const router = createRouter({
         {
           path: "",
           name: "Admin Dashboard",
-          props: true,
           component: () => import("../views/AdminDashboardView.vue"),
         },
         {
-          path: "/admin/mahasiswa",
+          path: "mahasiswa",
           name: "Mahasiswa Dashboard",
-          props: true,
           component: () => import("../views/AdminMahasiswaView.vue"),
         },
         {
-          path: "/admin/collection",
+          path: "collection",
           name: "Collection Dashboard",
-          props: true,
           component: () => import("../views/AdminCollectionView.vue"),
         },
         {
-          path: "/admin/items",
+          path: "items",
           name: "Items Dashboard",
-          props: true,
           component: () => import("../views/AdminItemsView.vue"),
         },
         {
-          path: "/admin/settings/api",
+          path: "settings/api",
           name: "API Dashboard",
-          props: true,
           component: () => import("../views/AdminApiView.vue"),
         },
       ],

@@ -149,7 +149,7 @@ onMounted(() => {
           </div>
           <span class="w-[1px] min-h-[4px] px-[2px] bg-black/50 dark:bg-white/50 dark-mode-transition" id="typ"></span>
         </h6>
-        <h2 class="text-4xl lg:text-6xl tracking-tighter font-semibold w-[85%] lg:w-full py-[4px] -mt-2" id="motto">
+        <h2 class="text-4xl lg:text-6xl tracking-tighter font-semibold w-[85%] lg:w-full py-[4px] lg:-mt-2" id="motto">
           Computer Without Enginnering</h2>
         <p class="mt-2 lg:mt-8 text-zinc-400" id="desc">IT College with some Electro Knowledge that can tell whats is conductor, semi conductor or not. Here are Computer Enginnering Unseod 24</p>
       </div>
@@ -182,21 +182,21 @@ onMounted(() => {
 
   <section class="section-screen lg:pt-20 flex-col justify-center items-center lg:gap-2 relative overflow-x-hidden lg:overflow-x-visible">
     <div class="w-full to-up-anim">
-      <h1 class="text-4xl lg:text-6xl font-semibold tracking-tight">Insert Text</h1>
+      <h1 class="text-4xl lg:text-6xl tracking-tight font-chillax font-bold">Insert Text</h1>
     </div>
     <div class="flex gap-4 lg:gap-8 flex-col lg:flex-row w-full min-h-full">
       <div class="min-h-full w-full lg:w-2/3 lg:h-[32rem] lg:max-h-[32rem] relative flex flex-col gap-2">
         <p class="lg:w-[57%] font-extralight text-sm lg:text-lg to-up-anim">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices ac dolor eleifend vehicula. Sed at ornare risus. In sagittis enim non pharetra luctus. Nullam posuere convallis hendrerit.</p>
         <h2 class="mt-3 lg:mt-6 text-xl lg:text-3xl to-up-anim">Insert Text</h2>
 
-        <Skeleton width="32rem" class="max-w-[32rem] lg:max-w-[14rem] aspect-square mt-2 lg:mt-4 to-up-anim" />
+        <Skeleton width="12.5rem" class="max-w-[32rem] lg:max-w-[14rem] aspect-square mt-2 lg:mt-4 to-up-anim" />
 
-        <div class="w-full lg:bg-back-200 dark:lg:bg-back-700 lg:h-[29rem] lg:w-[58%] rounded-sm mt-2 dark-mode-transition to-up-anim"></div>
-        <h5 class="text-2xl lg:text-4xl font-medium tracking-widest uppercase lg:w-1/2 mt-4 to-up-anim">Insert a long text</h5>
+        <div class="w-full lg:bg-back-200 dark:lg:bg-back-700 lg:h-[20rem] lg:w-[58%] rounded-sm mt-2 dark-mode-transition to-up-anim"></div>
+        <h5 class="text-2xl lg:text-4xl font-medium tracking-widest uppercase lg:w-1/2 mt-4 to-up-anim">Agile Secure Safe</h5>
         
         <Skeleton width="32rem" class="lg:absolute lg:-top-0 lg:aspect-square lg:left-[62%] max-w-full lg:max-w-[32rem] -z-[1] to-up-anim" />
 
-        <span class="-rotate-90 absolute medium-only top-8 -left-13 font-light text-back-200 dark:text-back-600 dark-mode-transition to-up-anim">Insert Text</span>
+        <span class="-rotate-90 absolute medium-only top-8 -left-14 font-light text-back-200 dark:text-back-600 dark-mode-transition to-up-anim">Gimana Wo</span>
       </div>
       <div class="min-h-full w-full lg:w-1/3 lg:h-[32rem] lg:max-h-[32rem] flex flex-col lg:justify-end lg:items-end lg:text-right font-extralight text-sm lg:text-lg medium-only">
         <h4 class="to-up-anim">Insert Text</h4>
