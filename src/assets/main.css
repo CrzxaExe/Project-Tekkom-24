@@ -7,6 +7,15 @@
     url("../assets/fonts/Chillax-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: Chillax-Bold;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../assets/fonts/Chillax-Semibold.woff2") format("woff2"),
+    url("../assets/fonts/Chillax-Semibold.woff") format("woff"),
+    url("../assets/fonts/Chillax-Semibold.ttf") format("truetype");
+}
+
 @import "tailwindcss";
 
 @theme {
@@ -20,7 +29,11 @@
   --color-accent-300: #60a5fa;
   --color-accent-700: #4381cc;
 
+  --color-card-from: #100932;
+  --color-card-to: #150048;
+
   --font-chillax: Chillax, sans-serif;
+  --font-chillax-bold: Chillax-Bold, sans-serif;
   --font-primary: "Inter";
   --font-secondary: "Poppins";
 }

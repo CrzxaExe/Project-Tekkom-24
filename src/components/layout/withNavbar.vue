@@ -1,13 +1,15 @@
 <script setup>
 import { RouterView } from 'vue-router';
 import Navbar from '../navigation/Navbar.vue';
+import Footer from '../sections/Footer.vue';
 </script>
 
 <template>
-    <Navbar />
+  <Navbar />
 
-      <div class="w-full block pt-22 lg:pt-18 relative"></div>
+  <div class="w-full block pt-22 lg:pt-18 relative"></div>
 
+  <RouterView />
 
-    <RouterView />
+  <Footer />
 </template>
