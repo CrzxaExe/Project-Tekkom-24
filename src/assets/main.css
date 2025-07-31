@@ -73,5 +73,5 @@ body {
 }
 
 @utility nav-link-btn {
-  @apply w-full lg:w-fit px-5 py-1 lg:px-4 rounded-lg text-center transition-all duration-300 ease-in-out dark:text-white hover:bg-white hover:text-back-800 dark:hover:text-shadow-accent-300 lg:hover:bg-transparent lg:hover:text-sky-500 active:bg-gray-600 active:text-gray-800 lg:active:bg-black dark:lg:active:bg-white lg:active:text-sky-700;
+  @apply w-full lg:w-fit px-5 py-1 lg:px-4 rounded-lg text-center transition-all duration-300 ease-in-out text-white lg:text-black dark:text-white hover:bg-white hover:text-back-800 dark:hover:text-shadow-accent-300 lg:hover:bg-transparent lg:hover:text-sky-500 active:bg-gray-600 active:text-gray-800 lg:active:bg-black dark:lg:active:bg-white lg:active:text-sky-700;
 }

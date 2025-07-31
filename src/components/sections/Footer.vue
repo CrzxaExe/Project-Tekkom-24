@@ -16,7 +16,6 @@ import SocialMedia from '../SocialMedia.vue';
                 
                 <SocialMedia text="TKM24" class="invert dark:invert-0" />
             </div>
-            <div></div>
         </div>
 
         <div class="w-full text-center text-xs font-light">@2025</div>

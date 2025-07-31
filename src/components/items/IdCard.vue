@@ -13,7 +13,7 @@ const month = ["January", "February", "March", "April", "June", "Juli", "August"
 
 <template>
     <div
-        class="aspect-[5.4/3] bg-linear-to-r from-card-from to-card-to w-[25.5rem] rounded-sm flex flex-col justify-between py-6 px-5 text-xs self-center text-white">
+        class="aspect-[5.4/3] bg-linear-to-r from-card-from to-card-to w-[25.5rem] rounded-sm flex flex-col justify-between py-5.5 px-5 text-xs self-center text-white">
         <div class="flex flex-row gap-2">
             <div class="aspect-[3/3.5] w-full max-w-[27%] max-h-[7rem] bg-white p-1 pb-2">
                 <img src="../../assets/avatar.jpg" alt="ava" class="aspect-square object-contain overflow-hidden">
@@ -32,12 +32,13 @@ const month = ["January", "February", "March", "April", "June", "Juli", "August"
                         if (i < 2) return e; return e.charAt(0).toUpperCase() + ". ";
                     }).join(" ") : name}}</h1>
             <div class=" flex flex-row justify-between mt-0.5 text-xs">
-                <span class="uppercase">{{ month[birthday.getMonth() - 1] }}</span>
-                <span>{{ birthday.getDate() }}</span>
+                        <span class="uppercase">{{ month[birthday.getMonth() - 1] }}</span>
+                        <span>{{ birthday.getDate() }}</span>
             </div>
             <h4 class="text-[0.7rem] mt-2">known as &quot;<span class="text-rose-700">{{ username }}</span>&quot;</h4>
 
-            <p class="font-extralight text-xs mt-2 min-h-[3rem] max-h-[3rem] flex justify-center items-center">{{ bio }}</p>
+            <p class="font-extralight text-xs mt-2 min-h-[3rem] max-h-[3rem] flex justify-center items-center">{{ bio }}
+            </p>
         </div>
     </div>
 

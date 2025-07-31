@@ -20,6 +20,21 @@ onMounted(() => {
       repeat: -1
     })
 
+    const pageTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.container',
+        start: "top bottom",
+        end: "bottom bottom",
+      },
+    })
+    pageTl.from(".to-up-anim",{
+    delay: 0.2,
+    duration: 0.6,
+    y: 90,
+    opacity: 0,
+    stagger: 0.06
+  })
+
     prodi.chars.forEach(e => {
       e.classList.add("bg-linear-to-b", "from-black", "dark:from-white", "from-30%", "to-black/40", "dark:to-white/20", "bg-clip-text", "text-transparent", "dark-mode-transition")
 
@@ -117,15 +132,6 @@ onMounted(() => {
     duration: 0.4,
     stagger: 0.1
   })
-
-  gsap.from(".to-up-anim", {
-    scrollTrigger: '.to-up-anim',
-    delay: 0.2,
-    duration: 0.6,
-    y: 90,
-    opacity: 0,
-    stagger: 0.06
-  })
 })
 </script>
 
@@ -196,7 +202,7 @@ onMounted(() => {
         <p class="lg:w-[57%] font-extralight text-sm lg:text-lg to-up-anim">A new major that combine several majors such
           as Informatics and Electro to get an IT major that focus on hardware, IOT and networking. So we are conductor
           now.</p>
-        <h2 class="mt-3 lg:mt-6 text-xl lg:text-3xl to-up-anim">Insert Text</h2>
+        <h2 class="mt-3 lg:mt-6 text-xl lg:text-3xl to-up-anim tracking-widest">Okay..</h2>
 
         <div class="my-auto"></div>
 

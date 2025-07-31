@@ -17,7 +17,6 @@ const toggleDarkMode = () => {
     document.documentElement.classList.toggle("dark");
 
     isDarkMode.value = !isDarkMode.value
-    toggleHamburger();
 }
 
 </script>
@@ -55,7 +54,7 @@ const toggleDarkMode = () => {
                 <span class="w-full h-[2px] bg-black dark:bg-white rounded transition-all ease-in-out duration-300 origin-bottom-left"
                     :class="[toggle ? '-rotate-45 translate-x-1' : '']"></span>
             </div>
-            <nav class="text-sm lg:text-base tracking-wider w-[calc(100%-var(--spacing)*6)] lg:w-fit flex flex-col lg:flex-row gap-2 lg:gap-4 uppercase items-center lg:scale-100 lg:justify-start absolute lg:relative font-secondary lg:opacity-100 top-[4.9rem] lg:top-0 right-3 lg:right-0 py-4 lg:py-0 px-2 lg:px-0 bg-back-200 dark:bg-back-800 lg:bg-back-200/0 dark:lg:bg-back-800/0 transition-all ease-in-out rounded-lg"
+            <nav class="text-sm lg:text-base tracking-wider w-[calc(100%-var(--spacing)*6)] lg:w-fit flex flex-col lg:flex-row gap-2 lg:gap-4 uppercase items-center lg:scale-100 lg:justify-start absolute lg:relative font-secondary lg:opacity-100 top-[4.9rem] lg:top-0 right-3 lg:right-0 py-4 lg:py-0 px-2 lg:px-0 bg-back-900 dark:bg-back-800 lg:bg-back-200/0 dark:lg:bg-back-800/0 transition-all ease-in-out rounded-lg"
                 :class="[toggle ? 'opacity-100 scale-100' : 'opacity-0 scale-0']">
                 <RouterLink
                     v-for="({ text, url }) in navbarURL"

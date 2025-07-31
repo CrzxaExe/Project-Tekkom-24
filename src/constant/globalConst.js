@@ -24,6 +24,29 @@ export const navbarURL = [
   { text: "gallery", url: "gallery" },
 ];
 
+export const contributors = [
+  {
+    name: "Front End",
+    icon: "bx bx-desktop",
+    member: ["Bintang Nugraha Putra", "Fachriel Yoga Wicaksono"],
+  },
+  {
+    name: "Back End",
+    icon: "bx bx-code",
+    member: ["Bintang Nugraha Putra"],
+  },
+  {
+    name: "Ui/UX",
+    icon: "bx bx-layout",
+    member: ["Bintang Nugraha Putra", "Fachriel Yoga Wicaksono"],
+  },
+  {
+    name: "Dev Ops",
+    icon: "bx bx-server",
+    member: ["Bintang Nugraha Putra"],
+  },
+];
+
 export const testGallery = [
   {
     title: "test aja yah guys awijwfamf",
@@ -94,7 +117,7 @@ export const testMahasiswa = [
   {
     id: "string",
     username: "yoags",
-    name: "Fachreil Yoga Wicaksono",
+    name: "Fachriel Yoga Wicaksono",
     nim: "H1H024041",
     active: true,
     profilePic: "string",

@@ -10,11 +10,6 @@ import { sosmedContent } from '@/constant/globalConst';
 const sosmed = ref(sosmedContent)
 
 onMounted(() => {
-    gsap.from("#sosmed-index", {
-        y: 30,
-        duration: 0.3,
-        delay: 0.32,
-    })
     gsap.from(".sosmed-link", {
         x: 50,
         opacity: 0,
