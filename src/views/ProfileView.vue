@@ -1,17 +1,3 @@
-<script setup lang="ts">
-import Carditem from '@/components/items/Carditem.vue';
-import IdCard from '@/components/items/IdCard.vue';
-import Techstack from '@/components/items/Techstack.vue';
-import { contributors, testMahasiswa } from '@/constant/globalConst';
-import { ref } from 'vue';
-
-const content = ref(0);
-
-const setContent = (n) => {
-    content.value = n;
-}
-</script>
-
 <template>
     <section
         class="section-screen max-w-screen lg:min-h-screen flex flex-col lg:pt-[9.2rem] lg:pb-2 px-0 lg:px-0 -mt-[2rem] lg:-mt-[4rem] dark:bg-back-900 bg-white justify-between">
@@ -30,7 +16,7 @@ const setContent = (n) => {
     </section>
 
     <section
-        class="bg-[#2c2c2c] dark:bg-zinc-300 z-[0] -mt-8 lg:-mt-3 text-back-200 dark:text-back-600 px-4 lg:px-8 py-6">
+        class="bg-[#2c2c2c] dark:bg-zinc-300 z-[0] -mt-4 lg:-mt-3 text-back-200 dark:text-back-600 px-4 lg:px-8 py-10">
         <div class="w-full flex flex-col items-center justify-center max-w-5xl mx-auto">
             <h1 class="text-sm lg:text-xs">Community</h1>
 
@@ -41,7 +27,7 @@ const setContent = (n) => {
             </p>
 
             <div
-                class="border-0 border-b-[2px] dark:border-back-600 border-back-200 mt-8 lg:mt-12 w-full py-1.5 flex flex-row gap-2 justify-between text-sm lg:text-base">
+                class="border-0 border-b-[2px] dark:border-back-600 border-back-200 mt-10 lg:mt-12 w-full py-1.5 flex flex-row gap-2 justify-between text-sm lg:text-base">
                 <button class="w-full text-center cursor-pointer" @click="setContent(0)">Visi & Misi</button>
                 <button class="w-full text-center cursor-pointer" @click="setContent(1)">Statistik</button>
                 <button class="w-full text-center cursor-pointer" @click="setContent(2)">Logo</button>
@@ -90,32 +76,35 @@ const setContent = (n) => {
                     class="dark:contrass-100 contrast-0 select-none aspect-square w-full max-w-[22rem]" />
 
                 <div class="w-full lg:w-1/2 px-0 lg:px-8">
-                    <h1>Filosofi</h1>
+                    <h1 class="text-xl lg:text-lg">Filosofi</h1>
 
-                    <ul class="list-disc pl-4">
-                        <li>Chip: tolong diisi</li>
-                        <li>Bentuk Listrik: tolong diisi</li>
-                        <li>Elektron: tolong diisi</li>
-                        <li>Gear: tolong diisi</li>
+                    <ul class="list-disc pl-4 mt-4">
+                        <li>Chip: tolong diisi yah yg buat logo</li>
+                        <li>Bentuk Listrik: tolong diisi yah yg buat logo</li>
+                        <li>Elektron: tolong diisi yah yg buat logo</li>
+                        <li>Gear: tolong diisi yah yg buat logo</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-8 lg:py-6 px-4 lg:px-28 w-full mb-4 lg:mb-12">
+    <section class="py-14 lg:py-12 px-4 lg:px-28 w-full mb-4 lg:mb-10">
         <h1 class="text-4xl lg:text-6xl font-chillax font-light">Meet Our Members</h1>
 
-        <div class="mt-8 lg:mt-16 w-full">
+        <div class="mt-8 lg:mt-12 w-full">
             <div class="w-full flex flex-row justify-between items-center">
                 <h1>Tekkom &apos;24</h1>
                 <div class="flex flex-row items-center justify-end gap-2">
-                    <input type="text" placeholder="Search / Ctrl + K" class="bg-back-200 dark:bg-back-700 outline-none px-3 rounded-lg w-[15rem] not-focus:placeholder-shown:max-w-[4.8rem] focus:max-w-[15rem] transition-all ease-in-out duration-300">
-                    <i class='bx bx-search text-lg lg:text-xl rounded-md flex items-center justify-center'></i>
+                    <input type="text" :placeholder="!searchIsFocus ? 'Ctrl + K' : 'Search'"
+                        @focus="searchIsFocus = true" @blur="searchIsFocus = false" ref="searchElement"
+                        class="not-focus:placeholder-shown:bg-transparent placeholder:text-black dark:placeholder:text-white bg-back-100 dark:bg-back-800 outline-none px-3 rounded-lg w-[15rem] not-focus:placeholder-shown:max-w-[5rem] focus:max-w-[15rem] transition-all ease-in-out duration-300">
+                    <i
+                        class='bx bx-search text-lg lg:text-xl scale-125 lg:scale-100 rounded-md flex items-center justify-center'></i>
                 </div>
             </div>
             <ul
-                class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-2 justify-center items-start min-h-fit max-h-[24rem] lg:min-h-[30rem] lg:max-h-[30rem] relative">
+                class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 lg:gap-2 justify-center items-start min-h-fit max-h-[28rem] lg:min-h-[30rem] lg:max-h-[30rem] relative">
                 <li v-for="({ nim, active, name, birthday, username, bio }, i) in testMahasiswa"
                     class="flex justify-center items-center max-h-fit" :key="i">
                     <IdCard :nim :user-active="active" :name :birthday="new Date(birthday)" :username :bio />
@@ -136,35 +125,70 @@ const setContent = (n) => {
                     </p>
                 </div>
                 <div class="w-full lg:w-1/2 flex items-center justify-end">
-                    <a href="#"
+                    <a href="https://github.com/CrzxaExe/Project-Tekkom-24" target="_blank"
                         class="w-full lg:w-fit flex flex-row justify-center items-center bg-black hover:bg-black/50 dark:bg-white dark:hover:bg-white/50 px-0 gap-1 lg:px-10 dark:text-back-900 text-white py-1.5 font-semibold text-lg lg:text-base rounded-xl lg:rounded-full transition-all ease-in-out duration-300"><i
                             class="bx bxl-github"></i>Github</a>
                 </div>
             </div>
         </div>
-        <div class="w-full h-[12rem] mt-2 lg:mt-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-10">
-            <Carditem icon="bx bxs-bolt" name="Fast and Light" description="Dibuat dengan framework Vue, maka tak heran jika website memiliki performa yang cepat dan tentunya ringan." />
-            <div class="bg-zinc-400"></div>
-            <div class="bg-zinc-400"></div>
-            <div class="bg-zinc-400"></div>
+        <div class="w-full min-h-[12rem] mt-2 lg:mt-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-10">
+            <Carditem v-for="({ title, icon, description }) in webVanity" :icon :name="title" :description />
         </div>
 
-        <div class="w-full">
-            <h1 class="text-3xl lg:text-4xl font-chillax mt-6 lg:mt-12 font-light tracking-tighter w-full">
+        <div class="w-full mt-16 lg:mt-12">
+            <h1 class="text-3xl lg:text-4xl font-chillax font-light tracking-tighter w-full">
                 Technology Behind This</h1>
         </div>
 
-        <div class="w-full mt-0 lg:mt-2">
+        <div class="w-full mt-2">
             <Techstack />
         </div>
 
-        <div class="w-full">
-            <h1 class="text-3xl lg:text-4xl font-chillax mt-4 lg:mt-8 font-light tracking-tighter w-full text-center">
+        <div class="w-full mt-16 lg:mt-12">
+            <h1 class="text-3xl lg:text-4xl font-chillax font-light tracking-tighter w-full text-center">
                 Contributors</h1>
         </div>
 
-        <div class="w-full h-[8rem] mt-4 lg:mt-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-10">
-            <Carditem v-for="({ name, icon, member}) in contributors" :icon :name :description="member.join('\n')" />
+        <div class="w-full min-h-[8rem] mt-2 lg:mt-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-10">
+            <Carditem v-for="({ name, icon, member }) in contributors" :icon :name :description="member.join('\n')"
+                class="lg:not-last:border-0 lg:not-last:border-r-[1px] border-white" />
         </div>
     </section>
 </template>
+
+<script setup>
+import Carditem from '@/components/items/Carditem.vue';
+import IdCard from '@/components/items/IdCard.vue';
+import Techstack from '@/components/items/Techstack.vue';
+import { contributors, testMahasiswa, webVanity } from '@/constant/globalConst';
+import { useMagicKeys, whenever } from '@vueuse/core';
+import { onBeforeMount, onMounted, ref } from 'vue';
+
+const content = ref(0);
+const searchIsFocus = ref(false);
+const searchElement = ref(null);
+
+const keys = useMagicKeys();
+
+
+const setContent = (n) => {
+    content.value = n;
+}
+
+const searchCombination = keys['Ctrl+K'];
+whenever(searchCombination, () => {
+    searchElement.value?.focus()
+})
+
+const defaultBrowserShortcut = (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault()
+    }
+}
+onMounted(() => {
+    window.addEventListener("keydown", defaultBrowserShortcut);
+})
+onBeforeMount(() => {
+    window.removeEventListener("keydown", defaultBrowserShortcut);
+})
+</script>

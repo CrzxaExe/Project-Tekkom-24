@@ -19,6 +19,7 @@
 @import "tailwindcss";
 
 @theme {
+  --color-back-100: #cfcfcf;
   --color-back-200: #9f9f9f;
   --color-back-500: #cbcbcb;
   --color-back-600: #767676;

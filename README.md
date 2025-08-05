@@ -1,29 +1,23 @@
 # project-tekkom
 
-This template should help get you started developing with Vue 3 in Vite.
+Source code website Tekkom 24 Unsoed
 
-## Recommended IDE Setup
+<h1>TechStack</h1>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Vue
+- JavaScript
+- GSAP
+- Vue-Use
+- Vite
 
-## Customize configuration
+Run command
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-bun install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
+```bash
 bun dev
 ```
 
-### Compile and Minify for Production
+or using npm
 
-```sh
-bun run build
+```bash
+npm run dev
 ```

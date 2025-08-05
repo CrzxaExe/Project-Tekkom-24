@@ -3,21 +3,11 @@ defineProps({
     text: String
 })
 
-import { onMounted, ref } from 'vue';
-import { gsap } from "gsap";
+import { ref } from 'vue';
 import { sosmedContent } from '@/constant/globalConst';
 
 const sosmed = ref(sosmedContent)
 
-onMounted(() => {
-    gsap.from(".sosmed-link", {
-        x: 50,
-        opacity: 0,
-        duration: 0.3,
-        delay: 0.42,
-        stagger: 0.06
-    })
-})
 </script>
 
 <template>

@@ -13,7 +13,7 @@ const month = ["January", "February", "March", "April", "June", "Juli", "August"
 
 <template>
     <div
-        class="aspect-[5.4/3] bg-linear-to-r from-card-from to-card-to w-[25.5rem] rounded-sm flex flex-col justify-between py-5.5 px-5 text-xs self-center text-white">
+        class="aspect-[5.4/3] bg-linear-to-r from-card-from to-card-to w-[25.5rem] rounded-lg flex flex-col justify-between py-5.5 px-5 text-xs self-center text-white">
         <div class="flex flex-row gap-2">
             <div class="aspect-[3/3.5] w-full max-w-[27%] max-h-[7rem] bg-white p-1 pb-2">
                 <img src="../../assets/avatar.jpg" alt="ava" class="aspect-square object-contain overflow-hidden">

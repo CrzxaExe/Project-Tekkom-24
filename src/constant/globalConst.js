@@ -6,6 +6,27 @@ export const sosmedContent = [
   },
 ];
 
+export const webVanity = [
+  {
+    title: "Fast and Light",
+    icon: "bx bxs-bolt",
+    description:
+      "Dibuat dengan framework Vue, maka tak heran jika website memiliki performa yang cepat dan tentunya ringan.",
+  },
+  {
+    title: "Simple with Elegan",
+    icon: "bx bxs-star",
+    description:
+      "Mengutamakan pengalaman para pengguna, namun masih mengedepankan simpelitas desain halaman",
+  },
+  {
+    title: "High Responsibility",
+    icon: "bx bx-grid",
+    description:
+      "Fit dengan device apapun sehingga tetap mempertahankan slogan kami yaitu 'Simpel with Elegan'",
+  },
+];
+
 export const adminURL = {
   scene: [
     { text: "Dashboard", url: "/admin", icon: "bx bxs-dashboard" },
@@ -36,7 +57,7 @@ export const contributors = [
     member: ["Bintang Nugraha Putra"],
   },
   {
-    name: "Ui/UX",
+    name: "UI/UX",
     icon: "bx bx-layout",
     member: ["Bintang Nugraha Putra", "Fachriel Yoga Wicaksono"],
   },

@@ -138,7 +138,7 @@ onMounted(() => {
 <template>
   <!-- Hero Section -->
   <section
-    class="h-screen-minus-26 lg:h-screen-minus-22 section-screen flex flex-col lg:flex-row lg:justify-center lg:items-center relative">
+    class="h-screen-minus-26 lg:h-screen-minus-22 section-screen flex flex-col lg:flex-row lg:justify-center lg:items-center relative overflow-x-hidden lg:overflow-x-visible">
     <div class="flex-col w-full lg:w-1/3">
       <div class="small-only">
         <h1 class="text-3xl font-bold inline-block" id="prodi">Teknik Komputer</h1>
@@ -157,7 +157,7 @@ onMounted(() => {
         <h2 class="text-4xl lg:text-6xl tracking-tighter font-semibold w-[85%] lg:w-full py-[4px] lg:-mt-2" id="motto">
           Computer Without Engineering</h2>
         <p class="mt-2 lg:mt-8 text-zinc-400" id="desc">IT College with some Electro Knowledge to only can power up a
-          computer and run program. Here are Computer Enginnering Unseod 24.</p>
+          computer and run program. Here are Computer Engineering Unseod 24.</p>
       </div>
 
       <SocialMedia text="Call us" />
@@ -173,7 +173,7 @@ onMounted(() => {
         <h1 class="text-4xl lg:text-6xl font-bold tracking-tighter hidden lg:block mt-2 dark-mode-transition" id="impr">
           Tekkom</h1>
 
-        <div class="w-full lg:min-h-[39.35vh] mt-4 lg:mt-8 left-anim-hero rounded-lg relative">
+        <div class="w-full lg:min-h-[39.35vh] mt-4 lg:mt-8 left-anim-hero rounded-lg relative max-w-full">
           <Skeleton class="w-full lg:min-h-[39.35vh]" height="39.5vh" width="100%" rounded="0.45em" />
           <span
             class="rotate-90 absolute -right-19 medium-only top-12 font-light text-back-200 dark:text-back-700 tracking-wider dark-mode-transition">HomeView.vue</span>
@@ -240,7 +240,7 @@ onMounted(() => {
   </section>
 
   <section
-    class="section-screen flex-col min-h-full lg:min-h-screen justify-center items-center lg:py-12 relative mt-16 lg:mt-0 gap-0 overflow-hidden lg:overflow-visible">
+    class="section-screen flex-col min-h-full lg:min-h-screen justify-center items-center lg:py-12 relative mt-16 lg:mt-0 gap-0 overflow-x-hidden lg:overflow-x-visible">
     <div class="w-full lg:min-h-[16rem] bg-zinc-400/0 lg:px-40 flex flex-col py-0 z-4 backdrop-grayscale-100 to-up-anim">
       <span
         class="font-regular pt-6 lg:pt-0 text-5xl lg:text-9xl lg:scale-[0.86] tracking-wider uppercase w-full text-left flex flex-row relative">
